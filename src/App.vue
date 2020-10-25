@@ -1,10 +1,7 @@
 <template>
   <div id="app">
+    <TopBar />
     <Sidebar />
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
   </div>
 </template>
@@ -12,11 +9,13 @@
 <script>
 // @ is an alias to /src
 import Sidebar from '@/components/Sidebar.vue'
+import TopBar from '@/components/TopBar.vue'
 
 export default {
-  name: 'Home',
+  name: 'App',
   components: {
-    Sidebar
+    Sidebar,
+    TopBar
   }
 }
 </script>
