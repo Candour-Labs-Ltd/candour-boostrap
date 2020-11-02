@@ -1,15 +1,18 @@
 <template>
   <div>
-    <h1>Profile Page</h1>
+    <h1>Sign In Page</h1>
+    <b-row align-v="center">
+      <b-col></b-col>
+      <b-col> </b-col>
+      <b-col></b-col>
+    </b-row>
   </div>
 </template>
 
 <script>
-
 export default {
-  name: "Profile",
-  components: {
-  },
+  name: "SignIn",
+  components: {},
   data: () => ({
     username: "Alan Avins",
     password: null,
@@ -19,6 +22,6 @@ export default {
     exportUsername() {
       this.$emit(this.username);
     },
-  }
+  },
 };
 </script>

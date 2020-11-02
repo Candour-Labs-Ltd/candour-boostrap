@@ -11,23 +11,33 @@ Vue.use(BootstrapVueIcons)
 
 Vue.config.productionTip = false
 
-Vue.mixin({
-  data() {
-    return {
-      darkMode: false,
-      handleDarkMode: "light"
-    }
-  },
-  watch: {
-    darkMode(darkMode) {
-      if (darkMode === true) {
-        this.handleDarkMode = "dark"
-      } else {
-        this.handleDarkMode = "light"
-      }
-    }
-  }
-})
+// Vue.mixin({
+//   data() {
+//     return {
+//       darkMode: false,
+//     }
+//   },
+//   computed: {
+//     handleDarkMode() {
+//       if (this.darkMode) {
+//         return "dark"
+//       } else {
+//         return ""
+//       }
+//     }
+//   },
+//   watch: {
+//     // darkMode(darkMode) {
+//     //   if (darkMode === true) {
+//     //     this.handleDarkMode
+//     //     console.log("Dark Mode Changed: ", this.handleDarkMode, darkMode)
+//     //   } else {
+//     //     this.handleDarkMode
+//     //     console.log("Dark Mode Changed: ", this.handleDarkMode, darkMode)
+//     //   }
+//     // }
+//   }
+// })
 
 new Vue({
   router,

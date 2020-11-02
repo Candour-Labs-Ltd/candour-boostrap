@@ -1,5 +1,5 @@
 <template>
-  <div :class="handleDarkMode" id="app">
+  <div id="app">
     <router-view />
   </div>
 </template>
@@ -26,12 +26,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   height: 100vh;
+  background-color: #777777;
+  color: white;
 }
 
-html,
-body {
+html, body {
   height: 100vh;
 }
+
+.brand-text {
+  color: white;
+}
+
 
 .dark {
   color: white;
@@ -40,7 +46,7 @@ body {
   height: 100vh;
   & .card {
     color: white;
-    background-color: #343434;
+    background-color: #777777;
     transition: 0.4s ease-in-out;
   }
   & .body {
@@ -63,23 +69,6 @@ body {
     background-color: #343434;
     transition: 0.4s ease-in-out;
   }
-  & #app {
-    color: white;
-    background-color: #343434;
-    transition: 0.4s ease-in-out;
-  }
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>

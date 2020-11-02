@@ -1,12 +1,12 @@
 <template>
-  <div class="bottom-right">
-    <b-collapse visible id="prefs">
-    <b-form-checkbox v-model="darkMode" name="dark-mode" switch>{{
-      darkMode === true ? "Dark Mode" : "Light Mode"
-    }}</b-form-checkbox>
+  <b-col align-self="end">
+    <b-icon icon="gear" v-b-toggle.prefs />
+    <b-collapse id="prefs">
+      <b-form-checkbox v-model="darkMode" name="dark-mode" switch>{{
+        darkMode === true ? "Dark Mode" : "Light Mode"
+      }}</b-form-checkbox>
     </b-collapse>
-    <b-icon icon="gear" />
-  </div>
+  </b-col>
 </template>
 
 <script>
@@ -18,7 +18,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 .bottomright {
   position: absolute;
   bottom: 8px;

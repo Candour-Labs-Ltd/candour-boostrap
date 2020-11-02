@@ -1,20 +1,11 @@
 <template>
   <div>
     <b-navbar>
-      <b-navbar-nav>
-        <b-nav-item v-b-toggle.sidebar>Conversations</b-nav-item>
-        <b-nav-item v-b-toggle.sidebar></b-nav-item>
-      </b-navbar-nav>
-      <b-navbar-nav class="ml-auto">
-        <b-nav-item right
-          ><b-avatar
-            variant="info"
-            src="https://placekitten.com/300/300"
-            size="sm"
-          ></b-avatar>
-          Alan Avins</b-nav-item
-        >
-      </b-navbar-nav>
+      <b-nav-text tag="h1" class="brand-text">SocialNetwork</b-nav-text>
+      <b-link class="nav-link" :to="{ path: '/' }">Home</b-link>
+      <b-link class="nav-link" :to="{ path: '/about' }">About</b-link>
+      <b-link class="nav-link" :to="{ path: '/register' }">Register</b-link>
+      <b-link class="ml-auto nav-link" :to="{ path: '/signin' }">Sign In</b-link>
     </b-navbar>
   </div>
 </template>
@@ -30,18 +21,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.brand-text {
+  color: white;
+  font-weight: 100;
+  font-size: 29pt;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+
+.nav-link {
+  color: white;
+  text-decoration: none;
 }
 </style>

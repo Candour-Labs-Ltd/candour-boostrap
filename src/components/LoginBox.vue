@@ -1,8 +1,5 @@
 <template>
-  <b-container class="whole-page" :class="handleDarkMode" fluid>
-
-    <b-row align-v="center" align-h="center">
-      <b-col cols="4">
+  <b-container>
         <b-card min-width="120px" class="login-box">
           Login
           <b-container fluid>
@@ -16,24 +13,20 @@
                   v-model="password"
                   placeholder="Password"
                 ></b-form-input>
-                <b-button>Login</b-button>
+                <b-button @click="$router.push('profile')">Login</b-button>
               </b-col>
             </b-row>
           </b-container>
         </b-card>
-      </b-col>
-    </b-row>
-    <Preferences />
   </b-container>
 </template>
 
 <script>
 // @ is an alias to /src
-import Preferences from "@/components/Preferences.vue"
 
 export default {
   mixins: [],
-  name: "Login",
+  name: "LoginBox",
   props: {},
   data() {
     return {
@@ -44,7 +37,6 @@ export default {
   },
   methods: {},
   components: {
-    Preferences
   },
 };
 </script>
