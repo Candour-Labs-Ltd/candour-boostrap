@@ -1,23 +1,21 @@
 <template>
-  <div id="app">
-    <TopBar />
-    <Sidebar />
-    <router-view/>
+  <div :class="handleDarkMode" id="app">
+    <router-view />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Sidebar from '@/components/Sidebar.vue'
-import TopBar from '@/components/TopBar.vue'
 
 export default {
-  name: 'App',
-  components: {
-    Sidebar,
-    TopBar
-  }
-}
+  name: "App",
+  data() {
+    return {};
+  },
+  computed: {},
+  components: {},
+  methods: {},
+};
 </script>
 
 
@@ -27,7 +25,49 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  height: 100vh;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+.dark {
+  color: white;
+  background-color: #343434;
+  transition: 0.4s ease-in-out;
+  height: 100vh;
+  & .card {
+    color: white;
+    background-color: #343434;
+    transition: 0.4s ease-in-out;
+  }
+  & .body {
+    color: white;
+    background-color: #343434;
+    transition: 0.4s ease-in-out;
+  }
+  & .html {
+    color: white;
+    background-color: #343434;
+    transition: 0.4s ease-in-out;
+  }
+  & .div {
+    color: white;
+    background-color: #343434;
+    transition: 0.4s ease-in-out;
+  }
+  & .form-control {
+    color: white;
+    background-color: #343434;
+    transition: 0.4s ease-in-out;
+  }
+  & #app {
+    color: white;
+    background-color: #343434;
+    transition: 0.4s ease-in-out;
+  }
 }
 
 #nav {

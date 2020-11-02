@@ -1,12 +1,9 @@
 <template>
   <div>
-    <b-navbar type="dark" variant="dark">
+    <b-navbar>
       <b-navbar-nav>
         <b-nav-item v-b-toggle.sidebar>Conversations</b-nav-item>
-      </b-navbar-nav>
-      <b-navbar-nav class="ml-auto" align="center">
-        <b-nav-item>Active</b-nav-item>
-        <b-nav-item>Link</b-nav-item>
+        <b-nav-item v-b-toggle.sidebar></b-nav-item>
       </b-navbar-nav>
       <b-navbar-nav class="ml-auto">
         <b-nav-item right
