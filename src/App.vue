@@ -39,36 +39,36 @@ html, body {
 }
 
 
-.dark {
-  color: white;
-  background-color: #343434;
-  transition: 0.4s ease-in-out;
-  height: 100vh;
-  & .card {
-    color: white;
-    background-color: #777777;
-    transition: 0.4s ease-in-out;
-  }
-  & .body {
-    color: white;
-    background-color: #343434;
-    transition: 0.4s ease-in-out;
-  }
-  & .html {
-    color: white;
-    background-color: #343434;
-    transition: 0.4s ease-in-out;
-  }
-  & .div {
-    color: white;
-    background-color: #343434;
-    transition: 0.4s ease-in-out;
-  }
-  & .form-control {
-    color: white;
-    background-color: #343434;
-    transition: 0.4s ease-in-out;
-  }
-}
+// .dark {
+//   color: white;
+//   background-color: #343434;
+//   transition: 0.4s ease-in-out;
+//   height: 100vh;
+//   & .card {
+//     color: white;
+//     background-color: #777777;
+//     transition: 0.4s ease-in-out;
+//   }
+//   & .body {
+//     color: white;
+//     background-color: #343434;
+//     transition: 0.4s ease-in-out;
+//   }
+//   & .html {
+//     color: white;
+//     background-color: #343434;
+//     transition: 0.4s ease-in-out;
+//   }
+//   & .div {
+//     color: white;
+//     background-color: #343434;
+//     transition: 0.4s ease-in-out;
+//   }
+//   & .form-control {
+//     color: white;
+//     background-color: #343434;
+//     transition: 0.4s ease-in-out;
+//   }
+// }
 
 </style>
