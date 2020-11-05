@@ -56,6 +56,21 @@
         </b-button-group>
       </b-button-toolbar>
     </b-navbar>
+    <b-navbar>
+      <b-button-toolbar>
+        <b-button-group>
+          <b-button class="main-nav-button" title="Profile" v-b-tooltip.hover>
+            <b-icon icon="people-fill" aria-hidden="true"></b-icon>
+          </b-button>
+          <b-button class="main-nav-button" title="Profile" v-b-tooltip.hover>
+            <b-icon icon="chat-quote-fill" aria-hidden="true"></b-icon>
+          </b-button>
+          <b-button class="main-nav-button" title="Profile" v-b-tooltip.hover>
+            <b-icon icon="graph-up" aria-hidden="true"></b-icon>
+          </b-button>
+        </b-button-group>
+      </b-button-toolbar>
+    </b-navbar>
     <b-container class="viewport" fluid>
       <b-row align-h="center">
         <b-col cols="3">
@@ -132,15 +147,21 @@ export default {
 
 .debug {
   background-color: cyan;
+  color: black;
+}
+
+.main-nav-button {
+  background-color: lightslategrey;
+  color: black;
 }
 
 .contacts-card {
-  max-width: 400px;
+  max-width: 350px;
   height: 500px;
 }
 
 .stats-card {
-  max-width: 400px;
+  max-width: 350px;
   height: 500px;
 }
 
