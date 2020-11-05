@@ -84,6 +84,7 @@
 
 <script>
 // @ is an alias to /src
+import firebase from 'firebase/app';
 
 export default {
   name: "Register",
@@ -94,14 +95,35 @@ export default {
     email: null,
     password: null,
     registrationComplete: false,
+    error: null,
   }),
   methods: {
     registration() {
-      console.log(this.firstname, this.surname, "has signed up.");
-      this.registrationComplete = true;
+      firebase
+        .auth()
+        .createUserWithEmailAndPassword(this.email, this.password)
+        .then((data) => {
+          data.user
+            .updateProfile({
+              displayName: this.firstname + " " + this.surname,
+            })
+            .then(() => {
+              console.log(this.firstname, this.surname, "has signed up.");
+              this.registrationComplete = true;
+            });
+        })
+        .catch((err) => {
+          this.error = err.message;
+          console.log(this.error);
+        });
     },
   },
   components: {},
+  computed: {
+    debug() {
+      return process.env.FIREBASE_API_KEY;
+    }
+  },
 };
 </script>
 

@@ -50,7 +50,7 @@
           <b-button :class="theme" title="Profile" v-b-tooltip.hover>
             <b-icon icon="person-circle" aria-hidden="true"></b-icon>
           </b-button>
-          <b-button :class="theme" title="Logout" v-b-tooltip.hover>
+          <b-button @click="signOut" :class="theme" title="Logout" v-b-tooltip.hover>
             <b-icon icon="x-circle" aria-hidden="true"></b-icon>
           </b-button>
         </b-button-group>
@@ -118,6 +118,9 @@
 </template>
 
 <script>
+import firebase from 'firebase/app';
+import { mapGetters } from "vuex";
+
 export default {
   name: "Profile",
   components: {},
@@ -126,10 +129,25 @@ export default {
     password: null,
     theme: "default",
   }),
-  computed: {},
+  computed: {
+    // map `this.user` to `this.$store.getters.user`
+    ...mapGetters({
+      userProfile: "user",
+    }),
+  },
   methods: {
     themeHandler(mode) {
       this.theme = mode;
+    },
+    signOut() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          this.$router.replace({
+            name: "HomePage",
+          });
+        });
     },
   },
 };
