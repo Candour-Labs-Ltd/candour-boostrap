@@ -32,7 +32,6 @@
             ></b-form-input>
           </b-form-group>
           <b-button type="submit" size="sm">Sign In</b-button>
-          <b-link :to="{ path: '/profile' }" replace>Sign In</b-link>
         </b-form>
       </b-card>
     </b-col>

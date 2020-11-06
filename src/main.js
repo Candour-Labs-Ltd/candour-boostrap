@@ -7,8 +7,9 @@ import router from './router'
 import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 import { firestorePlugin } from 'vuefire'
 import firebase from 'firebase/app';
-require('firebase/auth')
 import store from "./store";
+import 'firebase/firestore'
+require('firebase/auth')
 
 Vue.use(firestorePlugin)
 Vue.use(BootstrapVue)
@@ -28,8 +29,29 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
+// utils
+const db = firebase.firestore()
+const auth = firebase.auth()
+
+// collection references
+const usersCollection = db.collection('users')
+const postsCollection = db.collection('posts')
+const commentsCollection = db.collection('comments')
+const likesCollection = db.collection('likes')
+
+let app
+auth.onAuthStateChanged(() => {
+  if (!app) {
+    app = new Vue({
+      router,
+      db,
+      auth,
+      usersCollection,
+      postsCollection,
+      commentsCollection,
+      likesCollection,
+      store,
+      render: h => h(App)
+    }).$mount('#app')
+  }
+})

@@ -73,43 +73,14 @@
     </b-navbar>
     <b-container class="viewport" fluid>
       <b-row align-h="center">
-        <b-col cols="3">
+        <b-col cols="7">
           <b-card
             :bg-variant="theme"
             header="Contacts"
             class="text-center contacts-card"
             :class="theme"
           >
-            <b-card-text
-              >Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit.</b-card-text
-            >
-          </b-card>
-        </b-col>
-        <b-col>
-          <b-card
-            :bg-variant="theme"
-            header="Conversations"
-            class="text-center conversations-card"
-            :class="theme"
-          >
-            <b-card-text
-              >Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit.</b-card-text
-            >
-          </b-card>
-        </b-col>
-        <b-col cols="3">
-          <b-card
-            :bg-variant="theme"
-            header="Statistics"
-            class="text-center stats-card"
-            :class="theme"
-          >
-            <b-card-text
-              >Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit.</b-card-text
-            >
+          {{userProfile}}
           </b-card>
         </b-col>
       </b-row>
@@ -174,7 +145,7 @@ export default {
 }
 
 .contacts-card {
-  max-width: 350px;
+  max-width: 650px;
   height: 500px;
 }
 

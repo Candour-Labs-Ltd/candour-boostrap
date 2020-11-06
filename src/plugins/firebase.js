@@ -3,16 +3,16 @@ import 'firebase/auth'
 import 'firebase/firestore'
 
 // firebase init - add your own config here
-const firebaseConfig = {
-  apiKey: '',
-  authDomain: '',
-  databaseURL: '',
-  projectId: '',
-  storageBucket: '',
-  messagingSenderId: '',
-  appId: ''
-}
-firebase.initializeApp(firebaseConfig)
+// const firebaseConfig = {
+//   apiKey: '',
+//   authDomain: '',
+//   databaseURL: '',
+//   projectId: '',
+//   storageBucket: '',
+//   messagingSenderId: '',
+//   appId: ''
+// }
+// firebase.initializeApp(firebaseConfig)
 
 // utils
 const db = firebase.firestore()
